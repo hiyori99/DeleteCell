@@ -15,6 +15,7 @@
 		606B57DF26E26A4B005EEA58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 606B57DD26E26A4B005EEA58 /* LaunchScreen.storyboard */; };
 		606B57EA26E26A4B005EEA58 /* DeleteCellTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B57E926E26A4B005EEA58 /* DeleteCellTests.swift */; };
 		606B57F526E26A4B005EEA58 /* DeleteCellUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B57F426E26A4B005EEA58 /* DeleteCellUITests.swift */; };
+		606B580326E2B590005EEA58 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606B580226E2B590005EEA58 /* Item.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		606B57F026E26A4B005EEA58 /* DeleteCellUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeleteCellUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		606B57F426E26A4B005EEA58 /* DeleteCellUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteCellUITests.swift; sourceTree = "<group>"; };
 		606B57F626E26A4B005EEA58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		606B580226E2B590005EEA58 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				606B57DB26E26A4B005EEA58 /* Assets.xcassets */,
 				606B57DD26E26A4B005EEA58 /* LaunchScreen.storyboard */,
 				606B57E026E26A4B005EEA58 /* Info.plist */,
+				606B580226E2B590005EEA58 /* Item.swift */,
 			);
 			path = DeleteCell;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				606B580326E2B590005EEA58 /* Item.swift in Sources */,
 				606B57D726E26A48005EEA58 /* ViewController.swift in Sources */,
 				606B57D326E26A48005EEA58 /* AppDelegate.swift in Sources */,
 				606B57D526E26A48005EEA58 /* SceneDelegate.swift in Sources */,

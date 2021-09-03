@@ -18,12 +18,61 @@ class ViewController: UIViewController {
         "Hello World",
     ]
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         table.delegate = self
         table.dataSource = self
+        
+        // ボタン作成
+        let customButton = UIButton()
+
+        // スクリーンサイズ取得
+        let screenWidth:CGFloat = self.view.frame.width
+        let screenHeight:CGFloat = self.view.frame.height
+
+        // ボタンサイズ指定
+        let buttonWidth: CGFloat = 100
+        let buttonHeight: CGFloat = 100
+
+        // ボタンに反映（中央に位置調整）
+        customButton.frame = CGRect(
+            x: screenWidth/1.5,
+            y: screenHeight/1.2,
+            width: buttonWidth,
+            height: buttonHeight)
+
+        // ボタンの背景色
+        customButton.backgroundColor = UIColor.white
+
+        // アプリ標準のシステム画像を設定
+        customButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        // 画像の色をdarkGrayに変更
+        customButton.tintColor = .darkGray
+
+        // 縦幅・横幅いっぱいに画像を表示
+        customButton.contentHorizontalAlignment = .fill
+        customButton.contentVerticalAlignment = .fill
+
+        // ボタンを丸くする(サイズ/2で設定)
+        customButton.layer.cornerRadius = 50
+        // 画像を縮小する(マージンのようなもの)
+        customButton.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
+
+        // 影の色
+        customButton.layer.shadowColor = UIColor.black.cgColor
+        // 影のぼかし
+        customButton.layer.shadowRadius = 3
+        // 影の位置
+        customButton.layer.shadowOffset = CGSize(width: 1.5, height: 1.5)
+        // 影の濃さ
+        customButton.layer.shadowOpacity = 0.3
+
+        // ボタンをViewに追加
+        view.addSubview(customButton)
     }
+    
 
 }
 
