@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Item{
+class models{
     var title : String
     var done : Bool = false
     

@@ -40,7 +40,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wnL-fC-pOi" secondAttribute="bottom" id="t3s-Ua-Xp8"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="a4C-DK-Oph"/>
+                    <navigationItem key="navigationItem" id="a4C-DK-Oph">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="9Ia-I6-AWe">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="BYZ-38-t0r" id="Bci-Us-uGs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="table" destination="wnL-fC-pOi" id="hrZ-6O-aUM"/>
                     </connections>

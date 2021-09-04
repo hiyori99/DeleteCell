@@ -12,12 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet var table: UITableView!
     var models = [
-        "Hello World",
-        "Hello World",
-        "Hello World",
-        "Hello World",
+        "卵",
+        "牛乳",
+        "トイレットペーパー",
+        "ゴミ袋",
     ]
     
+    var itemArray: [models] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +34,12 @@ class ViewController: UIViewController {
         let screenHeight:CGFloat = self.view.frame.height
 
         // ボタンサイズ指定
-        let buttonWidth: CGFloat = 100
-        let buttonHeight: CGFloat = 100
+        let buttonWidth: CGFloat = 70
+        let buttonHeight: CGFloat = 70
 
         // ボタンに反映（中央に位置調整）
         customButton.frame = CGRect(
-            x: screenWidth/1.5,
+            x: screenWidth/1.4,
             y: screenHeight/1.2,
             width: buttonWidth,
             height: buttonHeight)
@@ -56,7 +57,7 @@ class ViewController: UIViewController {
         customButton.contentVerticalAlignment = .fill
 
         // ボタンを丸くする(サイズ/2で設定)
-        customButton.layer.cornerRadius = 50
+        customButton.layer.cornerRadius = 35
         // 画像を縮小する(マージンのようなもの)
         customButton.imageEdgeInsets = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
 
@@ -73,7 +74,26 @@ class ViewController: UIViewController {
         view.addSubview(customButton)
     }
     
+    @IBAction func addButtonPressed(_ sender: Any) {
+        var textField = UITextField()
+        let alert = UIAlertController(title: "アイテムを追加", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "リストに追加", style: .default) { (action) in
+//            let _: models = DeleteCell.models(title: textField.text!)
+//            self.models.append(newmodels)
+//            self.tableView.reloadData()
+            
+        }
 
+        alert.addTextField { (alertTextField) in
+            alertTextField.placeholder = "アイテム名"
+            textField = alertTextField
+        }
+
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
+    
+    }
+    
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
@@ -95,6 +115,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             tableView.beginUpdates()
